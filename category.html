@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Homepage</title>
+    <style>
+        body {
+            font-family:cursive;
+          
+            padding: 0;
+            background-color:rgb(250, 225, 201);
+           
+            
+        }
+        .header {
+           background-repeat: no-repeat;
+            background-size: cover;
+            color: #070707;
+            padding: 10px 0;
+            text-align: center;
+           
+        }
+        .logo{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap:20px;
+            align-items: center;
+            justify-content: center;
+        }
+        .logo img{
+            max-width: 100px;
+            height: auto;
+            width: 250px;
+            border-radius: 100px;
+    
+        }
+
+        .site-name{
+            font-size: 10px;
+            margin:0;
+            flex-grow: 1;
+            width: 11px;
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            background-color: burlywood;
+        }
+        .nav a {
+            color: #9e5002;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        .nav a:hover {
+            background-color: #fcfaf9;
+        }
+        .main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .content{
+            width: 70%;
+            margin: 70px auto;
+        }
+.dropdown-btn {
+    background-color: #e7bd8a;
+    color: #9e5002;
+    font-family: cursive;
+    padding: 14px 20px;
+    font-size: 16px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    justify-content: center;
+}
+
+.dropdown-btn:hover {
+    background-color: #b18c66;
+}
+
+
+.dropdown-content {
+    display: none; 
+    position: absolute;
+    background-color: #e7bd8a;
+    min-width: 100px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #9e5002;
+    padding: 5px 28px;
+    text-decoration: none;
+    display: block;
+    font-size: 11.5px;
+    white-space: nowrap;
+}
+
+.dropdown-content a:hover {
+    background-color: #e7a562;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+</style>
+
+
+
+<body>
+    <div class="header">
+         <div class="logo">
+             <img src="Messenger_creation_98A15E83-1043-4A2A-B8A6-4F5DB6F7545A.png" alt="logo"> <h1>Cellphone Accessories</h1>
+         </div>
+        
+     </div>
+ </div>
+    <div class="container">
+     <div class="nav">
+         <a href="home.html">Home</a>
+         <a href="product.html">Products</a>
+         <div class="dropdown">
+             <button class="dropdown-btn">Categories</button>
+             <div class="dropdown-content">
+                 <a href="category1.html">Desk Phone holder</a>
+                 <a href="category 2.html">Cellphone Case</a>
+                 <a href="category 3.html">Keychain</a>
+                 <a href="category 4.html">Tempered Glass</a>
+                 <a href="category 5.html">Adaptor</a>
+                 <a href="category 6.html">Earpods</a>
+             </div>
+             </div>
+             <a href="about.html">About</a>
+            </body>
+            </html>

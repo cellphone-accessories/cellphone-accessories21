@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<style>
+    .container {
+        display: flex;
+        justify-content: center;
+        width: 35em;
+        background:white;
+        box-shadow:10px 15px 15px 10px rgb(244, 215, 250);
+        border-radius: 10px;
+        padding: 20px;
+        max-width: 600px;
+        margin: auto;
+        margin-top: 100px;<
+    }
+    p {
+        font-size: 0.6em;
+        color: rgb(168, 103, 103);
+        letter-spacing: 1px;
+    }
+    .images {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: auto;
+        }
+         .imahe {
+            width: 200px;
+             height: 200px;
+             border-radius: 5px;
+             margin-right: 20px;
+        }
+        .slideshow-buttons {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+}
+.slideshow-buttons span {
+	width: 7px;
+	height: 7px;
+	border-radius: 50%;
+	background:rgb(121, 63, 63);
+}
+.pick{
+	text-transform:uppercase;
+	font-size: 10px;
+}
+.sizes{
+	display: flex;
+	justify-content: flex-start;
+	column-gap:30px;
+	flex-wrap: wrap;
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+    
+}
+.size{
+	border: none;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	padding: 2px;
+	font-size: 10px;
+	transition: 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+.size:hover{
+	background: red;
+	color: white;
+	transform: scale(1.1)
+    
+
+}
+.product{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin-right: 20px;
+}
+#p{
+	text-transform: uppercase;
+}
+.par2{
+	font-size: 15px;
+}
+.description {
+	text-transform: none;
+	letter-spacing: 5;
+	margin-bottom: 17px;
+	color: rgba(20,16,16,1.00);
+	font-size: 0.7em;
+	line-height: 1.6em;
+	text-align: justify;
+}
+.buttons{
+	padding: 1px;
+	display: flex;
+	outline: 0;
+	border: 0;
+	border-radius: 2px;
+	letter-spacing: 1px;
+	color: white;
+	cursor: pointer;	
+}
+.buttons:hover{
+	transition: all 0.4s ease-in-out;
+}
+.add{
+	width: 150px;
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+	text-transform: uppercase;
+    background-color:rgb(126, 90, 90); 
+}
+.back{
+	width: 50px;
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+	text-transform: uppercase;
+    background-color:rgb(126, 90, 90); 
+}
+    </style>
+
+    <div class="container">
+        <div class="images">
+        <img alt="" src="Screenshot_20241029-101629.png" class="imahe">
+            <div class="slideshow-buttons">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+        </div>
+        <p class="pick">Choose Color</p>
+        <div class="sizes">
+            <span class="size">BLACK</span>
+            <span class="size">WHITE</span>
+            <span class="size">PURPLE</span>
+
+			
+            </div>
+            </div>
+            <div class="product">
+                <p class="par2">Cellphone Accessories</p>
+                <h3>EARPODS</h3>
+                <h3>Php100.00</h3>
+                <p class="description">Compact and lightweight earphones,making them easy to carry on nd use on the go.</p>     
+             </p>
+                <div class="buttons">
+                <button class="add">Add to Cart</button>
+                <a href="product.html"><button class="back">Back</button></a>
+                        </div>
+                    </div>	
+            </div>
+               
+</body>
+</html>

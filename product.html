@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+              body {
+            font-family:cursive;
+          
+            padding: 0;
+            background-color:rgb(250, 225, 201);
+           
+            
+        }
+        .header {
+           background-repeat: no-repeat;
+            background-size: cover;
+            color: #070707;
+            padding: 10px 0;
+            text-align: center;
+           
+        }
+        .logo{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap:20px;
+            align-items: center;
+            justify-content: center;
+        }
+        .logo img{
+            max-width: 100px;
+            height: auto;
+            width: 250px;
+            border-radius: 100px;
+    
+        }
+
+        .site-name{
+            font-size: 10px;
+            margin:0;
+            flex-grow: 1;
+            width: 11px;
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            background-color: burlywood;
+        }
+        .nav a {
+            color: #9e5002;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        .nav a:hover {
+            background-color: #fcfaf9;
+        }
+        .main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .content{
+            width: 70%;
+            margin: 70px auto;
+        }
+        #outerbox {
+            width: 450px;
+            overflow: hidden;
+            border-radius: 10px;
+            float:right;
+            margin: 50px 20px 50px 50px;
+          
+        }
+
+        #sliderbox {
+            position: relative;
+            display: flex;
+            width: 4500px;
+            height: 450px;
+            animation: slider 30s infinite;
+        }
+        #sliderbox img {
+            width: 450px;
+            height: 450px;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        .dropdown-btn {
+    background-color: #e7bd8a;
+    color: #9e5002;
+    font-family: cursive;
+    padding: 14px 20px;
+    font-size: 16px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    justify-content: center;
+}
+
+.dropdown-btn:hover {
+    background-color: white;
+}
+
+
+.dropdown-content {
+    display: none; 
+    position: absolute;
+    background-color: #e7bd8a;
+    min-width: 100px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #9e5002;
+    padding: 5px 28px;
+    text-decoration: none;
+    display: block;
+    font-size: 11.5px;
+    white-space: nowrap;
+}
+
+.dropdown-content a:hover {
+    background-color: #e7a562;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}      
+
+        .gallery {
+            perspective: 1000px;
+        }
+
+        .gallery-container {
+            width: 300px;
+            height: 300px;
+            position: relative;
+            transform-style: preserve-3d;
+            animation: rotate 15s infinite linear;
+            gap: 10px;
+            padding: 30px;
+        }
+
+        .gallery-image {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            
+        }
+
+        .gallery-image img {
+            width: 80%;
+            height: 80%;
+            object-fit: cover;
+        }
+
+        .gallery-image:nth-child(1) {
+            transform: rotateY(0deg);
+        }
+
+        .gallery-image:nth-child(2) {
+            transform: rotateY(90deg);
+        }
+
+        .gallery-image:nth-child(3) {
+            transform: rotateY(180deg);
+        }
+
+        .gallery-image:nth-child(4) {
+            transform: rotateY(270deg);
+        }
+        .open-modal{
+        padding: 10px 15px;
+        background-color: #007Bff;
+        color: white;
+        text-align: center;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        display: inline-block;
+        text-decoration: none;
+    }
+    .open-modal:hover{
+        background-color: #0056b3;
+    }
+    .modal{
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    .modal-toggle{
+display: none;
+    }
+    .modal-toggle:checked+.modal{
+        display: block;
+    }
+    .modal-content{
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 300px;
+        border-radius: 5px;
+        position: relative;
+    }
+    .close{
+        color:#aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .close:hover{
+        color: black;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+    }
+    label{
+        margin: 10px 0 5px;
+    }
+    input[type="text"],
+    input[type="password"]{
+        padding:1opx;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+
+    }
+    button[type="Log-in"]{
+        background-color: #28a745;
+        border: none;
+        padding: 10px;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    button[type="Log-in"]:hover{
+        background-color: #218838;
+    }
+    .user-need{
+        display:flex;
+        justify-content:flex-end;
+        color: black;
+        
+    }
+    .user-need a{
+        text-decoration:none;
+    }
+
+        @keyframes rotate {
+            0% {
+                transform: rotateY(0deg);
+            }
+
+            100% {
+                transform: rotateY(360deg);
+            }
+        }
+
+        .thumbnail-gallery {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            margin-top: 50px;
+        }
+
+        .thumbnail {
+            overflow: hidden;
+            border-radius: 8px;
+            transition: transform 0.3s;
+            width: 200px;
+            height: 205px;
+            position: relative;
+        }
+
+        .thumbnail img {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .thumbnail:hover {
+            transform: scale(1.1);
+        }
+
+        .description {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            text-align: center;
+            font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+            font-size: 15px;
+            padding: 1px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .thumbnail:hover .description {
+            opacity: 1;
+        
+        }
+        
+    </style>
+</head>
+<body>
+   <div class="header">
+        <div class="logo">
+            <img src="Messenger_creation_98A15E83-1043-4A2A-B8A6-4F5DB6F7545A.png" alt="logo"> <h1>Cellphone Accessories</h1>
+        </div>
+       
+    </div>
+</div>
+   <div class="container">
+    <div class="nav">
+        <a href="home.html">Home</a>
+        <a href="product.html">Products</a>
+        <div class="dropdown">
+            <button class="dropdown-btn">Category</button>
+            <div class="dropdown-content">
+                <a href="category1.html">Desk Phone holder</a>
+                <a href="category 2.html">Cellphone Case</a>
+                <a href="category 3.html">Keychain</a>
+                <a href="category 4.html">Tempered Glass</a>
+                <a href="category 5.html">Adaptor</a>
+                <a href="category 6.html">Earpods</a>
+            </div>
+            </div>
+            <a href="about.html">About</a>
+                
+        
+           
+
+        </div>
+     <div class="gallery">
+        <center>
+        <div class="gallery-container">
+            <div class="gallery-image"><img src="Screenshot_20241029-132401.png" alt="image 1"></div>
+            <div class="gallery-image"><img src="Screenshot_20241029-090828.png" alt="image 2"></div>
+            <div class="gallery-image"><img src="Screenshot_20241029-091306~2.png" alt="image 3"></div>
+            <div class="gallery-image"><img src="Screenshot_20241029-091142.png" alt="image 4"></div>
+        </div>
+        </center>
+     <div class="thumbnail-gallery">
+
+        <div class="thumbnail"><a href="accessories 1.html"><img src="Screenshot_20241029-121940.png" alt=""></a>    
+            <div class="description">desk Phone Holder</div></div>
+        <div class="thumbnail"><a href="accessories 2.html"><img src="Screenshot_20241029-121859.png" alt=""></a>
+            <div class="description">Desk Cellphone Stand</div></div>
+        <div class="thumbnail"><a href="accessories 3.html"><img src="Screenshot_20241029-091509.png" alt=""></a>
+            <div class="description">tripod</div></div>
+        <div class="thumbnail"><a href="accessories 4.html"><img src="Screenshot_20241029-091635~2.png" alt=""></a>
+            <div class="description">Cellphone Desk Holder</div></div>
+        <div class="thumbnail"><a href="accessories 5.html"><img src="Screenshot_20241029-091709.png" alt=""></a>
+            <div class="description">tripod</div></div>
+        </div>
+        <div class="thumbnail-gallery">
+
+        <div class="thumbnail"><a href="accessories 6.html"><img src="Screenshot_20241029-132401.png" alt=""></a>
+             <div class="description">Cellphone Case</div></div>
+        <div class="thumbnail"><a href="accessories 7.html"><img src="vivo-y12-304-600x800.jpg" alt=""></a>
+            <div class="description">Cellphone Case</div></div>
+        <div class="thumbnail"><a href="accessories 8.html"><img src="1f30cee12ae1e944cee0fe7f51c640cd.jpg" alt=""></a>
+            <div class="description">Cellphone Case</div></div>
+        <div class="thumbnail"><a href="accessories 9.html"><img src="B-VIVOV9PRO-BLACK-2-247x329.jpg" alt=""></a>
+            <div class="description">Cellphone Case</div></div>
+        <div class="thumbnail"><a href="accessories 10.html"><img src="Screenshot_20241029-090730.png" alt=""></a>
+            <div class="description">Cellphone Case</div></div>
+        
+        </div>
+        <div class="thumbnail-gallery">
+
+        <div class="thumbnail"><a href="accessories 11.html"><img src="Screenshot_20241029-101400.png" alt=""></a>
+            <div class="description">keychain</div></div>
+        <div class="thumbnail"><a href="accessories 12.html"><img src="Screenshot_20241029-101408.png" alt=""></a>
+            <div class="description">keychain</div></div>
+        <div class="thumbnail"><a href="accessories 13.html"><img src="Screenshot_20241029-101433.png" alt=""></a>
+            <div class="description">keychain</div></div>
+        <div class="thumbnail"><a href="accessories 14.html"><img src="Screenshot_20241029-101507.png" alt=""></a>
+            <div class="description">keychain</div></div>
+        <div class="thumbnail"><a href="accessories 15.html"><img src="Screenshot_20241029-101400.png" alt=""></a>
+            <div class="description">keychain</div></div>
+       </div>
+       <div class="thumbnail-gallery">
+        <div class="thumbnail"><a href="accessories 16.html"><img src="Messenger_creation_42339FA6-4849-4E61-875C-1C2BD1BD2965.jpeg" alt=""></a>
+            <div class="description">Tempered Glass</div></div>
+        <div class="thumbnail"><a href="accessories 17.html"><img src="Messenger_creation_70275289-175A-410C-B6D1-DB77518EB515.jpeg" alt=""></a>
+            <div class="description">Tempered Glass</div></div>
+        <div class="thumbnail"><a href="accessories 18.html"><img src="Screenshot_20241029-091142.png" alt=""></a>
+            <div class="description">Tempered Glass</div></div>
+        <div class="thumbnail"><a href="accessories 19.html"><img src="Screenshot_20241029-091306~2.png" alt=""></a>
+            <div class="description">Tempered glass</div></div>
+        <div class="thumbnail"><a href="accessories 20.html"><img src="Screenshot_20241029-091339.png" alt=""></a>
+            <div class="description">Tempered Glass</div></div>
+       </div>
+       <div class="thumbnail-gallery">
+       
+        <div class="thumbnail"><a href="accessories 21.html"><img src="Screenshot_20241029-100235~2.png" alt=""></a>
+            <div class="description">Adaptor</div></div>
+        <div class="thumbnail"><a href="accessories 22.html"><img src="Screenshot_20241029-100259.png" alt=""></a>
+            <div class="description">Adaptor</div></div>
+        <div class="thumbnail"><a href="accessories 23.html"><img src="Screenshot_20241029-100346.png" alt=""></a>
+            <div class="description">Adaptor</div></div>
+        <div class="thumbnail"><a href="accessories 24.html"><img src="Screenshot_20241029-100636.png" alt=""></a>
+            <div class="description">Adaptor</div></div>
+        <div class="thumbnail"><a href="accessories 25.html"><img src="Screenshot_20241029-100704.png" alt=""></a>
+            <div class="description">Adaptor</div></div>
+       </div>
+       <div class="thumbnail-gallery">
+        <div class="thumbnail"><a href="accessories 26.html"><img src="Screenshot_20241029-101602.png" alt=""></a>
+            <div class="description">Earpods</div></div>
+        <div class="thumbnail"><a href="accessories 27.html"><img src="Screenshot_20241029-101629.png" alt=""></a>
+            <div class="description">Earpods</div></div>
+        <div class="thumbnail"><a href="accessories 28.html"><img src="Screenshot_20241029-101649.png" alt=""></a>
+            <div class="description">Earpods</div></div>
+        <div class="thumbnail"><a href="accessories 29.html"><img src="Screenshot_20241029-101720.png" alt=""></a>
+            <div class="description">Earpods</div></div>
+        <div class="thumbnail"><a href="accessories 30.html"><img src="Screenshot_20241029-101752.png" alt=""></a>
+            <div class="description">Earpods</div></div>
+       </div>
+       <div class="thumbnail-gallery">
+        
+    </div>
+    
+</body>
+</html>
+
+
